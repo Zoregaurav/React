@@ -1,3 +1,5 @@
+
+
 function Sum({num}){
 
     return(
@@ -8,4 +10,5 @@ function Sum({num}){
 
 }
 
+ 
 export default Sum;
