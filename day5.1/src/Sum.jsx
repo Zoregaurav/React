@@ -1,6 +1,10 @@
 import React from "react";
 
-const Sum = React.memo((num) => {
+
+//As childern use karte hein.....
+//React memo :If my parent re-renders, don't re-render me unless my props changed
+
+const Sum = React.memo(({num})=> {
   console.log("Sum render");
 
   return (
@@ -11,3 +15,5 @@ const Sum = React.memo((num) => {
 });
 
 export default Sum;
+
+

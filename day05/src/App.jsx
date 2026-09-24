@@ -10,6 +10,7 @@ function App() {
   //   // console.log("Hello");
   // },1000);
 
+
   useEffect(() => {
 
     if(!show)
@@ -23,10 +24,12 @@ function App() {
     return()=>{
       clearInterval(intervalId);
     }
+
+
   },[show]);
 
 
-  
+
   return (
     <>
       <button onClick={() => setShow(!show)}>{show ? "Show" : "Hide"}</button>
