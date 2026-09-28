@@ -19,14 +19,16 @@ function third(){
     fourth(b);
 }
 
+
 function second(){
     console.log("second function is called");
+    third();
 }
 
 
 function first(){
     console.log("First function is called");
-    Second();
+    second();
 }
 
 first();

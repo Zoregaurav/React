@@ -8,14 +8,14 @@ import { useState } from "react";
 
 function App() {
 
-    let [count,setCount]=useState(0);
-  //    [variable,function]
+   let [count,setCount]=useState(0);  //react consider as global varibale
+  //  [variable,function->react ko call karu...] 
 
    function incrementNumber(){
       count=count+1;   
     //  document.querySelector('h1').textContent=`Counter :${count}`;  //don't use this 
      setCount(count);
-   }
+   }  
 
 
   return (

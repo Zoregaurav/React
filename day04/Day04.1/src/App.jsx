@@ -11,6 +11,14 @@ function App() {
   //   cd:"Rohit"
   // } 
 
+
+    // const decrement=()=>setCount(count-1);
+  // props={
+  //   num:0,
+  //   cd:"Rohit"
+  // }
+
+
   return (
     <>
       <h1>Counter is :{count}</h1>

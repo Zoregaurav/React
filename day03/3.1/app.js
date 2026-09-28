@@ -6,7 +6,7 @@ import ReactDOM from "react-dom/client"
 function Header(){
     return(
         <>
-        <p>Here we are going to talk about strikr what courses we offer</p>
+        <p>Here we are going to talk about strike what courses we offer</p>
         <ul>
             <li>Web Development</li>
             <li>DSA</li>
