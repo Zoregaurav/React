@@ -1,6 +1,5 @@
-import { useStore } from "zustand";
-
-
+import { useStore } from "./store";
+ 
 function Header(){
 
     const userName=useStore((state)=>state.user);

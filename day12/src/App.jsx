@@ -6,10 +6,10 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Body from "./Body";
 
-// // export const  Countcontext=createContext();
-// // export const  Setcountcontext=createContext();
-// // export const Usercontext=createContext();
-// // export const Setusercontext=createContext();
+//  export const Countcontext=createContext();
+//  export const Setcountcontext=createContext();
+//  export const Usercontext=createContext();
+//  export const Setusercontext=createContext();
 
 
 
@@ -26,17 +26,17 @@ import Body from "./Body";
 // //         <Setcountcontext value={setCount}>
 // //             <Usercontext value={user}>
 // //               <Setusercontext value={setUser}>
-// //                  <h1>Hello coder Army:{hell}</h1>
-
+// //                  <h1  >Hello coder Army:{hell}</h1>
 // //                  <Header></Header>
 // //               </Setusercontext>
-// //             </Usercontext>
+// //             </Usercontext> 
 // //         </Setcountcontext>
 // //       </Countcontext>
        
-// //         </>
+// //      </>
 // //     )
 // // }
+
 
 
 // function App(){
@@ -51,6 +51,7 @@ import Body from "./Body";
 // export default App;
 
 
+
 function App(){
     return(
         <>
@@ -63,3 +64,4 @@ function App(){
 }
 
 export default App;
+

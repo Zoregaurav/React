@@ -1,9 +1,8 @@
-import { useState } from "react";
-import { useStore } from "zustand";
+import { useState } from "./store";
 
 
 
-function Footer(){
+function Footer(){  
 
     const count=useStore((state)=>state.count);
     const setNumber=useStore((state)=>state.setNumber);
