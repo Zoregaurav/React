@@ -7,7 +7,7 @@
 import {create} from 'zustand';
 
 
-export const useStore=create(()=>({
+export const useStore=create((set)=>({
     count:0,
     user:"Rohit",
     number:10,
@@ -19,9 +19,10 @@ export const useStore=create(()=>({
         count:state.count+1,
       }))
      },
-     
-     setNumber:()=>{
-         set({number:30})
+     setNumber:(value)=>{
+         set((state)=> ({
+            number:state.number+value,
+         }))
      }
       
 }))
