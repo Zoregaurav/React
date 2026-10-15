@@ -3,8 +3,9 @@ import { useNavigate } from "react-router";
 import api from "../api.js";
 import { useAuthStore } from "../store/useAuthStore.js";
 import { useChatStore } from "../store/useChatStore.js";
+import MessageContent from "../components/MessageContent";
 
-const MODEL = "gemini-3.1-flash-lite-preview";
+const MODEL = "openai/gpt-4.1-mini";
 
 // The server has already finished the answer. Reveal its text in small pieces.
 function revealReply(text, onChange) {
@@ -200,7 +201,7 @@ export default function ChatRoom({ chatId, onChatsChanged, onBusyChange, onUsage
                 </svg>
               </button>
             </div>
-            <p className="leading-7 text-[#ececec]">{message.content}</p>
+            <MessageContent content={message.content} />
             {message.role === "assistant" && message.usage?.totalTokens > 0 && (
               <p className="mt-2 text-xs text-[#8e8e8e]">
                 {message.usage.totalTokens} tokens used

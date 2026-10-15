@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState,useRef } from "react";
+
 
 
 function App() {
@@ -6,32 +7,32 @@ function App() {
   const [time, setTime] = useState(0);
   const [intervalId,setIntervalId]=useState(null);
  
-
+  const intervalIdRef=useRef(null);
+  console.log("Render");
+ 
 
   function handleStart() {
-
-    if(intervalId!=null)
+    if(intervalIdRef.current!=null)
       return;
-     console.log("render");
 
    const intId=setInterval(() => {
-      setTime(time=>time + 1);   // value bhej sakte hain and function bhi bhej sakte hain
+      setTime(prevTime=>prevTime+1); // value bhej sakte hain and function bhi bhej sakte hain
     }, 1000);
    
-     setIntervalId(intId);
+     intervalIdRef.current=intId;
   }
 
 
    
   function handleStop(){
-     clearInterval(intervalId);
-     setIntervalId(null);
+     clearInterval(intervalIdRef.current);
+     intervalIdRef.current=null;
   }
  
 
   function handleReset(){
-    clearInterval(intervalId);
-    setIntervalId(null);
+    clearInterval(intervalIdRef.current);
+    intervalIdRef.current=null;
     setTime(0);
   }
 
